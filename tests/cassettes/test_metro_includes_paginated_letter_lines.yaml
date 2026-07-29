@@ -1,0 +1,305 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - incidentesmovilidad.cdmx.gob.mx
+    method: GET
+    uri: https://incidentesmovilidad.cdmx.gob.mx/public/bandejaEstadoServicio.xhtml?idMedioTransporte=stc
+  response:
+    body:
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE html>\n<html
+        xmlns=\"http://www.w3.org/1999/xhtml\"><head id=\"j_idt3\"><link type=\"text/css\"
+        rel=\"stylesheet\" href=\"/jakarta.faces.resource/theme.css.xhtml?ln=primefaces-saga&amp;v=12.0.0\"
+        /><link type=\"text/css\" rel=\"stylesheet\" href=\"/jakarta.faces.resource/primeicons/primeicons.css.xhtml?ln=primefaces&amp;v=12.0.0\"
+        /><link rel=\"stylesheet\" href=\"/jakarta.faces.resource/css/adip-template.css.xhtml?v=eb689f0\"
+        /><link rel=\"stylesheet\" href=\"/jakarta.faces.resource/css/adip-common.css.xhtml?v=eb689f0\"
+        /><link rel=\"stylesheet\" href=\"/jakarta.faces.resource/font-awesome/6.4.0/css/all.min-jsf.css.xhtml?ln=webjars&amp;v=eb689f0\"
+        /><link rel=\"stylesheet\" href=\"/jakarta.faces.resource/font-awesome/6.4.0/css/v4-shims.min-jsf.css.xhtml?ln=webjars&amp;v=eb689f0\"
+        /><link rel=\"stylesheet\" href=\"/jakarta.faces.resource/components.css.xhtml?ln=primefaces&amp;v=12.0.0\"
+        /><script src=\"/jakarta.faces.resource/jquery/jquery.js.xhtml?ln=primefaces&amp;v=12.0.0\"></script><script
+        src=\"/jakarta.faces.resource/core.js.xhtml?ln=primefaces&amp;v=12.0.0\"></script><script
+        src=\"/jakarta.faces.resource/components.js.xhtml?ln=primefaces&amp;v=12.0.0\"></script><script
+        src=\"/jakarta.faces.resource/jquery/jquery-plugins.js.xhtml?ln=primefaces&amp;v=12.0.0\"></script><script
+        src=\"/jakarta.faces.resource/touch/touchswipe.js.xhtml?ln=primefaces&amp;v=12.0.0\"></script><link
+        rel=\"stylesheet\" href=\"/jakarta.faces.resource/css/stepper-ul.css.xhtml?v=eb689f0\"
+        /><script type=\"text/javascript\">if(window.PrimeFaces){PrimeFaces.settings.locale='es';PrimeFaces.settings.viewId='/public/bandejaEstadoServicio.xhtml';PrimeFaces.settings.contextPath='';PrimeFaces.settings.cookiesSecure=false;PrimeFaces.settings.cookiesSameSite='Strict';}</script>\n\t\n\t<title></title>\n\t<meta
+        name=\"description\" />\n\t<meta name=\"keywords\" />\n\n\t\n\t<meta name=\"robots\"
+        content=\"all\" />\n\n\t<meta http-equiv=\"Content-Type\" content=\"text/html;
+        charset=utf-8\" />\n\n\t\n\t\n\t\n\t<meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge,chrome=1\"
+        />\n\n\t\n\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"
+        />\n\n\t\n\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,
+        shrink-to-fit=no\" />\n\n\t\n\t<link rel=\"shortcut icon\" />\n\n\t<meta property=\"og:image\"
+        />\n\t<meta property=\"og:image:type\" content=\"image/png\" />\n\t<meta property=\"og:image:width\"
+        content=\"762\" />\n\t<meta property=\"og:image:height\" content=\"600\" />\n\t<meta
+        property=\"og:type\" content=\"website\" />\n\t<meta property=\"og:title\"
+        />\n\t<meta property=\"og:description\" />\n\t<meta property=\"og:url\" />\n\n\t\n\t<meta
+        property=\"twitter:url\" />\n\t<meta name=\"twitter:title\" />\n\t<meta name=\"twitter:description\"
+        />\n\t<meta name=\"twitter:image\" />\n\n\t\n\t<script async=\"true\" src=\"https://www.googletagmanager.com/gtag/js?id=\"></script>\n\t<script>\n\t\twindow.dataLayer
+        = window.dataLayer || [];\n\t\tfunction gtag(){dataLayer.push(arguments);}\n\t\tgtag('js',
+        new Date());\n\t\tgtag('config', '');\n\t</script>\n\n\t\n\t<link rel=\"preconnect\"
+        href=\"https://fonts.googleapis.com\" />\n\t<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\"
+        crossorigin=\"true\" />\n\t<link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap\"
+        rel=\"stylesheet\" /><script src=\"/jakarta.faces.resource/locales/locale-es.js.xhtml?ln=primefaces&amp;v=12.0.0\"></script></head><body>\n\n\t<div
+        id=\"wrapper\" style=\"background-color: white !important;\"><input id=\"fechaVersion\"
+        name=\"fechaVersion\" type=\"hidden\" value=\"${app.maven.build.timestamp}
+        UTC\" class=\"ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all
+        \" /><script id=\"fechaVersion_s\" type=\"text/javascript\">$(function(){PrimeFaces.cw(\"InputText\",\"widget_fechaVersion\",{id:\"fechaVersion\"});});</script><input
+        id=\"version\" name=\"version\" type=\"hidden\" value=\"eb689f0\" class=\"ui-inputfield
+        ui-inputtext ui-widget ui-state-default ui-corner-all \" /><script id=\"version_s\"
+        type=\"text/javascript\">$(function(){PrimeFaces.cw(\"InputText\",\"widget_version\",{id:\"version\"});});</script>\n\n\n\t\t<div
+        id=\"container\" class=\"contenido\" style=\"width: 100%; height: 90%; background-color:
+        #F0F1F6 !important;\">\n\t\t\t<div id=\"messages_div\" style=\"text-align:
+        left;\"><div id=\"messages\" class=\"ui-messages ui-widget\" aria-live=\"polite\"></div><script
+        id=\"messages_s\" type=\"text/javascript\">$(function(){PrimeFaces.cw(\"Messages\",\"widget_messages\",{id:\"messages\"});});</script>\n\t\t\t</div>\n\t\t\t<div
+        id=\"content\" class=\"contenido\" style=\"max-width: 1200px; height: 90%;
+        margin: 0 auto;\">\n\t\t<style>\n\n\t\t.ui-g {\n\t\t    display: flex !important;\n
+        \   \t\tbox-sizing: border-box;\n    \t\talign-items: center;\n    \t\tjustify-content:
+        space-between;\n\n\t\t}\n\n\t\t@media screen and (max-width: 1036px) {\n\t\t\t.fecha{\n\t\t\t
+        text-align: left !important;\n\t\t\t padding-left:15px !important;\n\n\t\t\t}\n\n\t\t}\n\n\t\t@media
+        screen and (max-width: 841px) {\n\t\t\t.titulo{\n\t\t\t font-size: 23px !important;\n\t\t\t}\n\n\t\t}\n\n\n\t\t@media
+        screen and (max-width: 640px) {\n\t\t\t.ui-datatable-reflow .ui-datatable-data
+        td[role=\"gridcell\"]:not(.ui-helper-hidden)\n\t\t\t\t{\n\t\t\t\tborder-style:
+        solid;\n\t\t\t\tborder-with: 1px;\n\t\t\t\ttext-align: left;\n\t\t\t\tdisplay:
+        block;\n\t\t\t\twidth: 100%;\n\t\t\t\tbox-sizing: border-box;\n\t\t\t\tfloat:
+        left;\n\t\t\t\tclear: left;\n\t\t\t\tfont-size: 14px !important;\n\t\t\t\tborder-bottom:
+        1px solid #cfcfcf;\n\t\t\t}\n\n\n\t\t}\n\n\t\t@media (max-width: 640px){\n\t\t\t.ui-datatable-reflow
+        .ui-datatable-data td[role=\"gridcell\"] .ui-column-title {\n\t\t\t\t    padding:
+        0.4em;\n\t\t\t    \tmin-width: 30%;\n\t\t\t    \tdisplay: inline-block;\n\t\t\t
+        \   \tmargin: -0.4em 1em -0.4em -0.4em;\n\t\t\t    \tfont-weight: bold !important;\n\t\t\t\t}\n\t\t}\n\n\n\t\t</style><div
+        id=\"contenidoGeneral\" class=\"ui-panelgrid ui-widget ui-panelgrid-blank
+        ui-fluid\" style=\"max-width: 1024px; padding: 3% 0; margin: auto; \"><div
+        id=\"contenidoGeneral_content\" class=\"ui-panelgrid-content ui-widget-content
+        ui-grid ui-grid-responsive\"><div class=\"ui-grid-row\"><div class=\"ui-panelgrid-cell
+        ui-grid-col-12\">\n<form id=\"frmEstadoServicio\" name=\"frmEstadoServicio\"
+        method=\"post\" action=\"/public/bandejaEstadoServicio.xhtml\" enctype=\"application/x-www-form-urlencoded\">\n<input
+        type=\"hidden\" name=\"frmEstadoServicio\" value=\"frmEstadoServicio\" />\n<div
+        id=\"frmEstadoServicio:j_idt20\" class=\"ui-outputpanel ui-widget\" style=\"background:
+        #FFFFFF !important; border-radius:8px;\"><div id=\"frmEstadoServicio:pnlTitulo\"
+        class=\"ui-panelgrid ui-widget ui-panelgrid-blank ui-fluid\"><div id=\"frmEstadoServicio:pnlTitulo_content\"
+        class=\"ui-panelgrid-content ui-widget-content ui-grid ui-grid-responsive\"><div
+        class=\"ui-g\"><div id=\"frmEstadoServicio:j_idt21\" class=\"ui-panelgrid-cell
+        ui-g-1 ui-md-1 ui-lg-1 ui-sm-4\"><img id=\"frmEstadoServicio:imgmetrobusicon\"
+        src=\"/jakarta.faces.resource/img/iconos/transportes/stc.png.xhtml?v=eb689f0\"
+        alt=\"\" ismap=\"false\" /></div><div id=\"frmEstadoServicio:j_idt22\" class=\"ui-panelgrid-cell
+        ui-g-5 ui-md-5 ui-lg-5 ui-sm-8\"><label id=\"frmEstadoServicio:j_idt23\" class=\"ui-outputlabel
+        ui-widget titulo\" style=\"font-size: 30px; color: #7C7C7C; font-family:Montserrat;
+        font-weight: bold\">Estado del Servicio </label></div><div id=\"frmEstadoServicio:j_idt24\"
+        style=\"padding-left:67px;\" class=\"ui-panelgrid-cell fecha\"><label id=\"frmEstadoServicio:j_idt25\"
+        class=\"ui-outputlabel ui-widget\" style=\"font-size: 16px !important; color:
+        #7C7C7C; font-family:Montserrat; font-weight: bold; \">29 julio 2026</label></div><div
+        id=\"frmEstadoServicio:j_idt26\" style=\"text-aling:right !important\" class=\"ui-panelgrid-cell
+        ui-g-3 ui-md-12 ui-lg-3 ui-sm-12\"><label id=\"frmEstadoServicio:j_idt27\"
+        class=\"ui-outputlabel ui-widget\" style=\"font-size: 16px !important; color:
+        #7C7C7C; font-family:Montserrat; font-weight: bold; \">Actualizaci\xF3n: </label><label
+        id=\"frmEstadoServicio:j_idt28\" class=\"ui-outputlabel ui-widget\" style=\"font-size:
+        16px !important; color: #7C7C7C; font-family:Montserrat; font-weight: bold;
+        \">23:03</label></div></div></div></div><div id=\"frmEstadoServicio:pnltblEstadoServicio\"
+        class=\"ui-panelgrid ui-widget ui-datatable-reflow ui-datatable-data\"><div
+        id=\"frmEstadoServicio:pnltblEstadoServicio_content\" class=\"ui-panelgrid-content
+        ui-widget-content ui-grid ui-grid-responsive\"><div class=\"ui-grid-row\"><div
+        class=\"ui-panelgrid-cell ui-grid-col-12\"><div id=\"frmEstadoServicio:tblEstadoServicio\"
+        class=\"ui-datatable ui-widget ui-datatable-reflow\" style=\";visibility:hidden;\"><div
+        class=\"ui-datatable-tablewrapper\"><table role=\"grid\"><thead id=\"frmEstadoServicio:tblEstadoServicio_head\"><tr><th
+        id=\"frmEstadoServicio:tblEstadoServicio:j_idt29\" class=\"ui-state-default
+        ui-draggable-column\" aria-label=\"L\xEDnea\" scope=\"col\" style=\"text-aling:
+        center !important;\"><span class=\"ui-column-title\">L\xEDnea</span></th><th
+        id=\"frmEstadoServicio:tblEstadoServicio:j_idt30\" class=\"ui-state-default
+        ui-draggable-column\" aria-label=\"Estado\" scope=\"col\" colspan=\"2\"><span
+        class=\"ui-column-title\">Estado</span></th><th id=\"frmEstadoServicio:tblEstadoServicio:j_idt32\"
+        class=\"ui-state-default ui-draggable-column\" aria-label=\"Estaciones afectadas\"
+        scope=\"col\" colspan=\"2\"><span class=\"ui-column-title\">Estaciones afectadas</span></th><th
+        id=\"frmEstadoServicio:tblEstadoServicio:j_idt34\" class=\"ui-state-default
+        ui-draggable-column\" aria-label=\"Informaci\xF3n adicional\" scope=\"col\"
+        colspan=\"2\"><span class=\"ui-column-title\">Informaci\xF3n adicional</span></th></tr></thead><tbody
+        id=\"frmEstadoServicio:tblEstadoServicio_data\" class=\"ui-datatable-data
+        ui-widget-content\"><tr data-ri=\"0\" class=\"ui-widget-content ui-datatable-even\"><td
+        role=\"gridcell\" style=\"text-aling: center !important;\" class=\"\"><img
+        id=\"frmEstadoServicio:tblEstadoServicio:0:imgmetrobusicon\" src=\"/jakarta.faces.resource/img/iconos/lineas/stc1.svg.xhtml?v=eb689f0\"
+        alt=\"\" width=\"30px\" height=\"30px\" ismap=\"false\" /></td><td role=\"gridcell\"
+        colspan=\"2\" class=\"\">Servicio Regular</td><td role=\"gridcell\" colspan=\"2\"
+        class=\"\">Ninguna</td><td role=\"gridcell\" colspan=\"2\" class=\"\"></td></tr><tr
+        data-ri=\"1\" class=\"ui-widget-content ui-datatable-odd\"><td role=\"gridcell\"
+        style=\"text-aling: center !important;\" class=\"\"><img id=\"frmEstadoServicio:tblEstadoServicio:1:imgmetrobusicon\"
+        src=\"/jakarta.faces.resource/img/iconos/lineas/stc12.svg.xhtml?v=eb689f0\"
+        alt=\"\" width=\"30px\" height=\"30px\" ismap=\"false\" /></td><td role=\"gridcell\"
+        colspan=\"2\" class=\"\">Avance lento por lluvia</td><td role=\"gridcell\"
+        colspan=\"2\" class=\"\">L\xEDnea Completa</td><td role=\"gridcell\" colspan=\"2\"
+        class=\"\"></td></tr><tr data-ri=\"2\" class=\"ui-widget-content ui-datatable-even\"><td
+        role=\"gridcell\" style=\"text-aling: center !important;\" class=\"\"><img
+        id=\"frmEstadoServicio:tblEstadoServicio:2:imgmetrobusicon\" src=\"/jakarta.faces.resource/img/iconos/lineas/stc2.svg.xhtml?v=eb689f0\"
+        alt=\"\" width=\"30px\" height=\"30px\" ismap=\"false\" /></td><td role=\"gridcell\"
+        colspan=\"2\" class=\"\">Servicio Regular</td><td role=\"gridcell\" colspan=\"2\"
+        class=\"\">Ninguna</td><td role=\"gridcell\" colspan=\"2\" class=\"\"></td></tr><tr
+        data-ri=\"3\" class=\"ui-widget-content ui-datatable-odd\"><td role=\"gridcell\"
+        style=\"text-aling: center !important;\" class=\"\"><img id=\"frmEstadoServicio:tblEstadoServicio:3:imgmetrobusicon\"
+        src=\"/jakarta.faces.resource/img/iconos/lineas/stc3.svg.xhtml?v=eb689f0\"
+        alt=\"\" width=\"30px\" height=\"30px\" ismap=\"false\" /></td><td role=\"gridcell\"
+        colspan=\"2\" class=\"\">Avance lento por lluvia</td><td role=\"gridcell\"
+        colspan=\"2\" class=\"\">L\xEDnea Completa</td><td role=\"gridcell\" colspan=\"2\"
+        class=\"\"></td></tr><tr data-ri=\"4\" class=\"ui-widget-content ui-datatable-even\"><td
+        role=\"gridcell\" style=\"text-aling: center !important;\" class=\"\"><img
+        id=\"frmEstadoServicio:tblEstadoServicio:4:imgmetrobusicon\" src=\"/jakarta.faces.resource/img/iconos/lineas/stc4.svg.xhtml?v=eb689f0\"
+        alt=\"\" width=\"30px\" height=\"30px\" ismap=\"false\" /></td><td role=\"gridcell\"
+        colspan=\"2\" class=\"\">Avance lento por lluvia</td><td role=\"gridcell\"
+        colspan=\"2\" class=\"\">L\xEDnea Completa</td><td role=\"gridcell\" colspan=\"2\"
+        class=\"\"></td></tr><tr data-ri=\"5\" class=\"ui-widget-content ui-datatable-odd\"><td
+        role=\"gridcell\" style=\"text-aling: center !important;\" class=\"\"><img
+        id=\"frmEstadoServicio:tblEstadoServicio:5:imgmetrobusicon\" src=\"/jakarta.faces.resource/img/iconos/lineas/stc5.svg.xhtml?v=eb689f0\"
+        alt=\"\" width=\"30px\" height=\"30px\" ismap=\"false\" /></td><td role=\"gridcell\"
+        colspan=\"2\" class=\"\">Avance lento por lluvia</td><td role=\"gridcell\"
+        colspan=\"2\" class=\"\">L\xEDnea Completa</td><td role=\"gridcell\" colspan=\"2\"
+        class=\"\"></td></tr><tr data-ri=\"6\" class=\"ui-widget-content ui-datatable-even\"><td
+        role=\"gridcell\" style=\"text-aling: center !important;\" class=\"\"><img
+        id=\"frmEstadoServicio:tblEstadoServicio:6:imgmetrobusicon\" src=\"/jakarta.faces.resource/img/iconos/lineas/stc6.svg.xhtml?v=eb689f0\"
+        alt=\"\" width=\"30px\" height=\"30px\" ismap=\"false\" /></td><td role=\"gridcell\"
+        colspan=\"2\" class=\"\">Servicio Regular</td><td role=\"gridcell\" colspan=\"2\"
+        class=\"\">Ninguna</td><td role=\"gridcell\" colspan=\"2\" class=\"\"></td></tr><tr
+        data-ri=\"7\" class=\"ui-widget-content ui-datatable-odd\"><td role=\"gridcell\"
+        style=\"text-aling: center !important;\" class=\"\"><img id=\"frmEstadoServicio:tblEstadoServicio:7:imgmetrobusicon\"
+        src=\"/jakarta.faces.resource/img/iconos/lineas/stc7.svg.xhtml?v=eb689f0\"
+        alt=\"\" width=\"30px\" height=\"30px\" ismap=\"false\" /></td><td role=\"gridcell\"
+        colspan=\"2\" class=\"\">Servicio Regular</td><td role=\"gridcell\" colspan=\"2\"
+        class=\"\">Ninguna</td><td role=\"gridcell\" colspan=\"2\" class=\"\"></td></tr><tr
+        data-ri=\"8\" class=\"ui-widget-content ui-datatable-even\"><td role=\"gridcell\"
+        style=\"text-aling: center !important;\" class=\"\"><img id=\"frmEstadoServicio:tblEstadoServicio:8:imgmetrobusicon\"
+        src=\"/jakarta.faces.resource/img/iconos/lineas/stc8.svg.xhtml?v=eb689f0\"
+        alt=\"\" width=\"30px\" height=\"30px\" ismap=\"false\" /></td><td role=\"gridcell\"
+        colspan=\"2\" class=\"\">Avance lento por lluvia</td><td role=\"gridcell\"
+        colspan=\"2\" class=\"\">L\xEDnea Completa</td><td role=\"gridcell\" colspan=\"2\"
+        class=\"\"></td></tr><tr data-ri=\"9\" class=\"ui-widget-content ui-datatable-odd\"><td
+        role=\"gridcell\" style=\"text-aling: center !important;\" class=\"\"><img
+        id=\"frmEstadoServicio:tblEstadoServicio:9:imgmetrobusicon\" src=\"/jakarta.faces.resource/img/iconos/lineas/stc9.svg.xhtml?v=eb689f0\"
+        alt=\"\" width=\"30px\" height=\"30px\" ismap=\"false\" /></td><td role=\"gridcell\"
+        colspan=\"2\" class=\"\">Servicio Regular</td><td role=\"gridcell\" colspan=\"2\"
+        class=\"\">Ninguna</td><td role=\"gridcell\" colspan=\"2\" class=\"\"></td></tr></tbody></table></div><div
+        id=\"frmEstadoServicio:tblEstadoServicio_paginator_bottom\" class=\"ui-paginator
+        ui-paginator-bottom ui-widget-header ui-corner-bottom\" role=\"navigation\"
+        aria-label=\"Paginaci\xF3n\"><span class=\"ui-paginator-current\">10 de 12</span><a
+        href=\"#\" class=\"ui-paginator-first ui-state-default ui-corner-all ui-state-disabled\"
+        aria-label=\"Primera p\xE1gina\" tabindex=\"-1\"><span class=\"ui-icon ui-icon-seek-first\">F</span></a><a
+        href=\"#\" class=\"ui-paginator-prev ui-state-default ui-corner-all ui-state-disabled\"
+        aria-label=\"P\xE1gina anterior\" tabindex=\"-1\"><span class=\"ui-icon ui-icon-seek-prev\">P</span></a><span
+        class=\"ui-paginator-pages\"><a class=\"ui-paginator-page ui-state-default
+        ui-state-active ui-corner-all\" tabindex=\"0\" href=\"#\">1</a><a class=\"ui-paginator-page
+        ui-state-default ui-corner-all\" tabindex=\"0\" href=\"#\">2</a></span><a
+        href=\"#\" class=\"ui-paginator-next ui-state-default ui-corner-all\" aria-label=\"P\xE1gina
+        siguiente\" tabindex=\"0\"><span class=\"ui-icon ui-icon-seek-next\">N</span></a><a
+        href=\"#\" class=\"ui-paginator-last ui-state-default ui-corner-all\" aria-label=\"\xDAltima
+        p\xE1gina\" tabindex=\"0\"><span class=\"ui-icon ui-icon-seek-end\">E</span></a></div><input
+        id=\"frmEstadoServicio:tblEstadoServicio_columnOrder\" name=\"frmEstadoServicio:tblEstadoServicio_columnOrder\"
+        type=\"hidden\" autocomplete=\"off\" value=\"frmEstadoServicio:tblEstadoServicio:j_idt29,frmEstadoServicio:tblEstadoServicio:j_idt30,frmEstadoServicio:tblEstadoServicio:j_idt32,frmEstadoServicio:tblEstadoServicio:j_idt34\"
+        /></div><script id=\"frmEstadoServicio:tblEstadoServicio_s\" type=\"text/javascript\">$(function(){PrimeFaces.cw(\"DataTable\",\"widget_frmEstadoServicio_tblEstadoServicio\",{id:\"frmEstadoServicio:tblEstadoServicio\",paginator:{id:['frmEstadoServicio:tblEstadoServicio_paginator_bottom'],rows:10,rowCount:12,page:0,currentPageTemplate:'{endRecord}
+        de {totalRecords}'},draggableColumns:true,resizeMode:\"expands\",reflow:true,groupColumnIndexes:[],disableContextMenuIfEmpty:false});});</script></div></div></div></div></div><input
+        type=\"hidden\" name=\"jakarta.faces.ViewState\" id=\"j_id1:jakarta.faces.ViewState:0\"
+        value=\"-2415425103303553065:376033142477388326\" autocomplete=\"off\" />\n</form></div></div></div></div>\n\t\t\t</div>\n\t\t</div><div
+        id=\"j_idt37\"></div><script id=\"j_idt37_s\" type=\"text/javascript\">$(function(){PrimeFaces.cw(\"AjaxStatus\",\"widget_j_idt37\",{id:\"j_idt37\",delay:0,start:function(){PF('statusDialog').show()},success:function(){PF('statusDialog').hide()}});});</script><div
+        id=\"dlgProcesando\" class=\"ui-dialog ui-widget ui-widget-content ui-corner-all
+        ui-shadow ui-hidden-container\" style=\"overflow-y:hidden !important;\"><div
+        class=\"ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top\"><span
+        id=\"dlgProcesando_title\" class=\"ui-dialog-title\">Procesando...</span></div><div
+        class=\"ui-dialog-content ui-widget-content\" id=\"dlgProcesando_content\">\n\n\t\t<div
+        id=\"divProcesando\" align=\"center\"><span id=\"lblProcesando\">Espere un
+        momento por favor</span><img id=\"imgProcesando\" src=\"/jakarta.faces.resource/img/loading.gif.xhtml?v=eb689f0\"
+        alt=\"\" width=\"100%\" height=\"100%\" ismap=\"false\" />\n\t\t</div></div></div><script
+        id=\"dlgProcesando_s\" type=\"text/javascript\">$(function(){PrimeFaces.cw(\"Dialog\",\"statusDialog\",{id:\"dlgProcesando\",draggable:false,resizable:false,modal:true,width:\"280px\",height:\"340px\"});});</script>\n\n\t</div></body>\n</html>"
+    headers:
+      Cache-Control:
+      - no-cache,no-store,must-revalidate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '17624'
+      Content-Security-Policy:
+      - frame-ancestors 'self' *.cdmx.gob.mx
+      Content-Type:
+      - text/html;charset=UTF-8
+      Date:
+      - Thu, 30 Jul 2026 05:03:15 GMT
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - nginx/1.31.3
+      X-Content-Type-Options:
+      - nosniff
+      X-XSS-Protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
+- request:
+    body: jakarta.faces.partial.ajax=true&jakarta.faces.source=frmEstadoServicio%3AtblEstadoServicio&jakarta.faces.partial.execute=frmEstadoServicio%3AtblEstadoServicio&jakarta.faces.partial.render=frmEstadoServicio%3AtblEstadoServicio&frmEstadoServicio%3AtblEstadoServicio=frmEstadoServicio%3AtblEstadoServicio&frmEstadoServicio%3AtblEstadoServicio_pagination=true&frmEstadoServicio%3AtblEstadoServicio_first=10&frmEstadoServicio%3AtblEstadoServicio_rows=10&frmEstadoServicio%3AtblEstadoServicio_encodeFeature=true&frmEstadoServicio=frmEstadoServicio&jakarta.faces.ViewState=-2415425103303553065%3A376033142477388326
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      content-length:
+      - '607'
+      content-type:
+      - application/x-www-form-urlencoded
+      faces-request:
+      - partial/ajax
+      host:
+      - incidentesmovilidad.cdmx.gob.mx
+      x-requested-with:
+      - XMLHttpRequest
+    method: POST
+    uri: https://incidentesmovilidad.cdmx.gob.mx/public/bandejaEstadoServicio.xhtml?idMedioTransporte=stc
+  response:
+    body:
+      string: "<?xml version='1.0' encoding='UTF-8'?>\n<partial-response><changes><update
+        id=\"messages\"><![CDATA[<div id=\"messages\" class=\"ui-messages ui-widget\"
+        aria-live=\"polite\"></div><script id=\"messages_s\" type=\"text/javascript\">PrimeFaces.cw(\"Messages\",\"widget_messages\",{id:\"messages\"});</script>]]></update><update
+        id=\"frmEstadoServicio:tblEstadoServicio\"><![CDATA[<tr data-ri=\"10\" class=\"ui-widget-content
+        ui-datatable-even\"><td role=\"gridcell\" style=\"text-aling: center !important;\"
+        class=\"\"><img id=\"frmEstadoServicio:tblEstadoServicio:10:imgmetrobusicon\"
+        src=\"/jakarta.faces.resource/img/iconos/lineas/stca.svg.xhtml?v=eb689f0\"
+        alt=\"\" width=\"30px\" height=\"30px\" ismap=\"false\" /></td><td role=\"gridcell\"
+        colspan=\"2\" class=\"\">Avance lento por lluvia</td><td role=\"gridcell\"
+        colspan=\"2\" class=\"\">L\xEDnea Completa</td><td role=\"gridcell\" colspan=\"2\"
+        class=\"\"></td></tr><tr data-ri=\"11\" class=\"ui-widget-content ui-datatable-odd\"><td
+        role=\"gridcell\" style=\"text-aling: center !important;\" class=\"\"><img
+        id=\"frmEstadoServicio:tblEstadoServicio:11:imgmetrobusicon\" src=\"/jakarta.faces.resource/img/iconos/lineas/stcb.svg.xhtml?v=eb689f0\"
+        alt=\"\" width=\"30px\" height=\"30px\" ismap=\"false\" /></td><td role=\"gridcell\"
+        colspan=\"2\" class=\"\">Avance lento por lluvia</td><td role=\"gridcell\"
+        colspan=\"2\" class=\"\">L\xEDnea Completa</td><td role=\"gridcell\" colspan=\"2\"
+        class=\"\"></td></tr>]]></update><update id=\"j_id1:jakarta.faces.ViewState:0\"><![CDATA[-2415425103303553065:376033142477388326]]></update></changes></partial-response>"
+    headers:
+      Cache-Control:
+      - no-cache,no-store,must-revalidate
+      - no-cache
+      Connection:
+      - keep-alive
+      Content-Security-Policy:
+      - frame-ancestors 'self' *.cdmx.gob.mx
+      Content-Type:
+      - text/xml; charset=UTF-8
+      Date:
+      - Thu, 30 Jul 2026 05:03:15 GMT
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - nginx/1.31.3
+      Transfer-Encoding:
+      - chunked
+      X-Content-Type-Options:
+      - nosniff
+      X-XSS-Protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
+version: 1
