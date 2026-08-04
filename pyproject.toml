@@ -38,8 +38,8 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/felipao/observatorio"
-Findings = "https://github.com/felipao/observatorio/blob/main/docs/FINDINGS.md"
+Homepage = "https://github.com/felipao-mx/observatorio"
+Findings = "https://github.com/felipao-mx/observatorio/blob/main/docs/FINDINGS.md"
 
 [project.scripts]
 observatorio = "observatorio.cli:main"

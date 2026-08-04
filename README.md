@@ -36,7 +36,7 @@ pip install observatorio     # once published
 Not on PyPI yet. For now:
 
 ```bash
-git clone https://github.com/felipao/observatorio
+git clone https://github.com/felipao-mx/observatorio
 cd observatorio
 uv sync
 ```
