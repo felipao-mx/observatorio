@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import pytest
 
-from cdmx_status import SYSTEMS, StatusClient
+from observatorio import SYSTEMS, StatusClient
 
 
 @pytest.mark.vcr

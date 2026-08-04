@@ -5,7 +5,7 @@ status through one shared (undocumented) government endpoint. This library
 fetches it, works around its quirks, and hands back plain dictionaries.
 
     import asyncio
-    from cdmx_status import StatusClient
+    from observatorio import StatusClient
 
     async def main():
         async with StatusClient() as client:

@@ -1,4 +1,4 @@
-# cdmx-status
+# observatorio
 
 Live service status for Mexico City's public transport — Metro, Metrobús,
 Trolebús, Tren Ligero and Cablebús — as plain Python dictionaries.
@@ -10,6 +10,9 @@ This is an unofficial library. It reads the public service-status page at
 which the Metro, Metrobús and STE websites embed. The page is server-rendered
 HTML, and parsing it correctly is harder than it looks — see
 [docs/FINDINGS.md](docs/FINDINGS.md) if you want to know why.
+
+*Observatorio* is the western terminal of Metro Línea 1, and a place from which
+you watch.
 
 ## Coverage
 
@@ -27,14 +30,14 @@ feed omits).
 ## Install
 
 ```bash
-pip install cdmx-status     # once published
+pip install observatorio     # once published
 ```
 
 Not on PyPI yet. For now:
 
 ```bash
-git clone https://github.com/felipao/cdmx-status-scraper
-cd cdmx-status-scraper
+git clone https://github.com/felipao/observatorio
+cd observatorio
 uv sync
 ```
 
@@ -176,9 +179,9 @@ less than a routine rain slowdown.
 ## CLI
 
 ```bash
-cdmx-status                 # table of all 33 lines
-cdmx-status --json          # machine-readable
-cdmx-status --watch 300     # poll every 5 min, print only on change
+observatorio                 # table of all 33 lines
+observatorio --json          # machine-readable
+observatorio --watch 300     # poll every 5 min, print only on change
 ```
 
 ```

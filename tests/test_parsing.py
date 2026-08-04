@@ -6,7 +6,7 @@ are the tests that actually protect against regressions.
 
 from __future__ import annotations
 
-from cdmx_status.client import _ajax_fragment, _parse_rows
+from observatorio.client import _ajax_fragment, _parse_rows
 
 
 def _row(

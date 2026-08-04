@@ -1,4 +1,4 @@
-"""Command line interface: ``python -m cdmx_status`` / ``cdmx-status``."""
+"""Command line interface: ``python -m observatorio`` / ``observatorio``."""
 
 from __future__ import annotations
 
@@ -68,7 +68,7 @@ async def _watch(interval: int, as_json: bool) -> int:
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(
-        prog="cdmx-status",
+        prog="observatorio",
         description="Live service status for CDMX public transport.",
     )
     parser.add_argument("--json", action="store_true", help="emit JSON instead of a table")

@@ -45,7 +45,7 @@ record:  ## Re-record VCR cassettes against the live service
 	$(UV) pytest -q
 
 run:  ## Print current service status
-	$(UV) cdmx-status
+	$(UV) observatorio
 
 clean:  ## Remove build and cache artefacts
 	rm -rf build dist .pytest_cache .ruff_cache

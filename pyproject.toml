@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "cdmx-status"
+name = "observatorio"
 version = "0.1.0"
 description = "Live service status for Mexico City public transport (Metro, Metrobús, Trolebús, Tren Ligero, Cablebús)"
 readme = "README.md"
@@ -26,7 +26,7 @@ dependencies = [
 
 # PEP 735 group rather than an optional-dependency extra: these are for working
 # on the library, not for consuming it, so they should not be installable as
-# `pip install cdmx-status[dev]`. uv syncs this group by default.
+# `pip install observatorio[dev]`. uv syncs this group by default.
 [dependency-groups]
 dev = [
     "pytest>=8",
@@ -38,14 +38,14 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/felipao/cdmx-status-scraper"
-Findings = "https://github.com/felipao/cdmx-status-scraper/blob/main/docs/FINDINGS.md"
+Homepage = "https://github.com/felipao/observatorio"
+Findings = "https://github.com/felipao/observatorio/blob/main/docs/FINDINGS.md"
 
 [project.scripts]
-cdmx-status = "cdmx_status.cli:main"
+observatorio = "observatorio.cli:main"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/cdmx_status"]
+packages = ["src/observatorio"]
 
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
