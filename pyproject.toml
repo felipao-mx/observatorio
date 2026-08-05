@@ -9,12 +9,18 @@ description = "Live service status for Mexico City public transport (Metro, Metr
 readme = "README.md"
 requires-python = ">=3.9"
 license = { file = "LICENSE" }
+authors = [{ name = "felipao-mx" }]
 keywords = ["cdmx", "mexico-city", "metro", "metrobus", "transit", "open-data", "gtfs"]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
     "Topic :: Software Development :: Libraries",
     "Framework :: AsyncIO",
     "Natural Language :: Spanish",
@@ -35,10 +41,13 @@ dev = [
     "vcrpy>=7",
     "ruff>=0.16",
     "ty>=0.0.65",
+    "pre-commit>=4",
 ]
 
 [project.urls]
 Homepage = "https://github.com/felipao-mx/observatorio"
+Repository = "https://github.com/felipao-mx/observatorio"
+Issues = "https://github.com/felipao-mx/observatorio/issues"
 Findings = "https://github.com/felipao-mx/observatorio/blob/main/docs/FINDINGS.md"
 
 [project.scripts]
@@ -67,6 +76,12 @@ select = [
     "C4",        # comprehensions
     "RUF",       # ruff-specific
 ]
+
+[tool.ruff.format]
+# Ruff also formats Python blocks embedded in Markdown. The README's examples
+# line up their trailing comments so each field is explained next to it, and the
+# formatter collapses that alignment. Prose stays hand-formatted.
+exclude = ["*.md"]
 
 [tool.ruff.lint.per-file-ignores]
 # Tests reach into private parsing helpers on purpose -- that is where the

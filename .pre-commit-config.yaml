@@ -1,0 +1,46 @@
+# Install with `make hooks`. CI runs the same hooks over every file, so a commit
+# that passes here is the same commit that passes CI.
+#
+# ruff and ty run as local hooks through `uv run` on purpose: that uses the
+# versions pinned in uv.lock, rather than a second set pinned by `rev:` here
+# that would drift from what CI and `make lint` use.
+
+# Recorded VCR fixtures are byte-for-byte server output. Nothing may rewrite them.
+exclude: ^tests/cassettes/
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-toml
+      - id: check-merge-conflict
+      - id: check-added-large-files
+
+  - repo: local
+    hooks:
+      - id: ruff-check
+        name: ruff check
+        entry: uv run ruff check --fix --force-exclude
+        language: system
+        types_or: [python, pyi]
+        require_serial: true
+
+      - id: ruff-format
+        name: ruff format
+        entry: uv run ruff format --force-exclude
+        language: system
+        types_or: [python, pyi]
+        require_serial: true
+
+      # Type errors are not per-file: changing one module can break another, so
+      # ty always sees the whole project rather than the staged files.
+      - id: ty
+        name: ty check
+        entry: uv run ty check
+        language: system
+        types_or: [python, pyi]
+        pass_filenames: false
+        require_serial: true

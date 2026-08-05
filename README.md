@@ -196,13 +196,44 @@ observatorio --watch 300     # poll every 5 min, print only on change
 
 ```bash
 make install   # uv sync
+make hooks     # install the git pre-commit hook -- once, after cloning
 make test      # pytest, replaying VCR cassettes offline
-make lint      # ruff + ty
+make lint      # every check the git hook and CI run
 make check     # lint + test
+make dist      # build the sdist and wheel, and check the packaging metadata
 ```
 
 `make help` lists the rest. Network tests replay from `tests/cassettes`; parser
 tests need no network at all.
+
+`make hooks` installs a [pre-commit](https://pre-commit.com) hook that runs
+`ruff check --fix`, `ruff format`, `ty` and a few file-hygiene checks before each
+commit, so unformatted or unlinted code cannot leave the machine. ruff and ty run
+through `uv run`, at the versions pinned in `uv.lock` — not a second set pinned
+in `.pre-commit-config.yaml` that could drift from CI. The hook fixes what it
+safely can and then fails; re-stage and commit again.
+
+Every pull request runs the same checks on GitHub Actions
+([`.github/workflows/ci.yml`](.github/workflows/ci.yml)): the identical hook list
+over every file (so `--no-verify` is caught), the test suite on Python 3.9
+through 3.13, and a packaging build. CI sets `VCR_RECORD_MODE=none`, so a request
+without a cassette fails instead of reaching the live service.
+
+## Releasing
+
+Publishing runs from [`.github/workflows/publish.yml`](.github/workflows/publish.yml)
+when a GitHub Release is published. It uses PyPI [trusted publishing][tp], so
+there is no API token stored in the repository — the publisher has to be
+registered once on PyPI (owner `felipao-mx`, repository `observatorio`, workflow
+`publish.yml`, environment `pypi`) and a matching `pypi` environment created in
+the repository settings.
+
+1. Bump `version` in `pyproject.toml` and merge it.
+2. Tag the commit and publish a release — `v0.2.0` for version `0.2.0`.
+   The workflow fails if the tag and the version disagree, because PyPI will not
+   let a file be replaced once uploaded.
+
+[tp]: https://docs.pypi.org/trusted-publishers/
 
 Early — the public API may still move before `1.0`. Issues and PRs welcome, in
 English or Spanish.
