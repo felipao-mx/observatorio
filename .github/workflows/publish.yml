@@ -1,7 +1,5 @@
 name: Publish
 
-# Publishing is driven by GitHub Releases: tag a commit, publish the release,
-# and this uploads the matching distributions to PyPI.
 on:
   release:
     types: [published]
@@ -9,43 +7,27 @@ on:
 permissions:
   contents: read
 
-# Actions here are pinned to commit SHAs rather than tags, because this is the
-# workflow that holds a credential PyPI trusts. A tag can be moved; a SHA cannot.
-# CI uses plain tags -- there is nothing to steal there.
-
 jobs:
   build:
     name: Build and verify
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/checkout@v7
         with:
-          # Nothing here needs to push, so do not leave a token on disk.
           persist-credentials: false
-      - uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 # v9.0.0
+      - uses: astral-sh/setup-uv@v9.0.0
 
-      # PyPI refuses to replace a file once uploaded, so a version that does not
-      # match the tag has to fail here rather than after the upload.
       - name: Check the tag matches the project version
-        run: |
-          version=$(uv version --short)
-          tag=${GITHUB_REF_NAME#v}
-          if [ "$version" != "$tag" ]; then
-            echo "Tag $GITHUB_REF_NAME does not match version $version in pyproject.toml" >&2
-            exit 1
-          fi
+        run: test "v$(uv version --short)" = "$GITHUB_REF_NAME"
 
       - run: uv build
 
-      # Install each distribution on its own and import it. Catches a package
-      # that builds but ships nothing importable -- a missing module, a bad
-      # entry point -- which metadata checks cannot see.
       - name: Smoke test the wheel
-        run: uv run --isolated --no-project --with dist/*.whl -- python -c "import observatorio; print(observatorio.__version__)"
+        run: uv run --isolated --no-project --with dist/*.whl -- python -c "import observatorio"
       - name: Smoke test the source distribution
-        run: uv run --isolated --no-project --with dist/*.tar.gz -- python -c "import observatorio; print(observatorio.__version__)"
+        run: uv run --isolated --no-project --with dist/*.tar.gz -- python -c "import observatorio"
 
-      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+      - uses: actions/upload-artifact@v7
         with:
           name: dist
           path: dist/
@@ -54,20 +36,14 @@ jobs:
     name: Upload to PyPI
     needs: build
     runs-on: ubuntu-latest
-    # Kept separate from the build job on purpose: this job holds the OIDC token
-    # and runs no project code at all -- it only downloads files the build job
-    # already produced and uploads them. A compromised build dependency
-    # therefore never shares a runner with the publishing credential.
     environment:
       name: pypi
       url: https://pypi.org/p/observatorio
     permissions:
-      # Trusted publishing: PyPI verifies this token instead of a stored API
-      # key. Configure it once at https://pypi.org/manage/account/publishing/.
       id-token: write
     steps:
-      - uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 # v9.0.0
-      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+      - uses: astral-sh/setup-uv@v9.0.0
+      - uses: actions/download-artifact@v8
         with:
           name: dist
           path: dist/

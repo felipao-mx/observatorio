@@ -5,7 +5,6 @@ on:
   push:
     branches: [main]
 
-# A new push to the same branch makes the previous run pointless.
 concurrency:
   group: ci-${{ github.ref }}
   cancel-in-progress: true
@@ -14,8 +13,6 @@ permissions:
   contents: read
 
 env:
-  # Same rule as the Makefile: an unrecorded request is a hard failure rather
-  # than a silent call to the live CDMX service.
   VCR_RECORD_MODE: none
 
 jobs:
@@ -24,8 +21,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      # Pinned to an exact tag: setup-uv stopped publishing the floating major
-      # alias after v7, so `@v9` does not resolve.
       - uses: astral-sh/setup-uv@v9.0.0
         with:
           enable-cache: true
@@ -33,16 +28,12 @@ jobs:
         with:
           path: ~/.cache/pre-commit
           key: pre-commit-${{ hashFiles('.pre-commit-config.yaml') }}
-      # The same hooks a contributor runs on commit, over every file rather than
-      # only the staged ones -- so `--no-verify` or an uninstalled hook still
-      # gets caught here.
       - run: uv run pre-commit run --all-files --show-diff-on-failure
 
   test:
     name: Test on Python ${{ matrix.python-version }}
     runs-on: ubuntu-latest
     strategy:
-      # One old-Python failure should not hide the state of the others.
       fail-fast: false
       matrix:
         python-version: ["3.9", "3.10", "3.11", "3.12", "3.13"]
@@ -63,6 +54,4 @@ jobs:
         with:
           enable-cache: true
       - run: uv build
-      # Catches the metadata problems PyPI rejects on upload -- when the release
-      # workflow runs it is already too late to fix them.
       - run: uvx twine check --strict dist/*
