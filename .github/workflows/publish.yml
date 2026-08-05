@@ -1,0 +1,50 @@
+name: Publish
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build and verify
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@v9.0.0
+
+      - name: Check the tag matches the project version
+        run: test "$(uv version --short)" = "$GITHUB_REF_NAME"
+
+      - run: uv build
+
+      - name: Smoke test the wheel
+        run: uv run --isolated --no-project --with dist/*.whl -- python -c "import observatorio"
+      - name: Smoke test the source distribution
+        run: uv run --isolated --no-project --with dist/*.tar.gz -- python -c "import observatorio"
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: dist
+          path: dist/
+
+  publish:
+    name: Upload to PyPI
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: pypi
+      url: https://pypi.org/p/observatorio
+    permissions:
+      id-token: write
+    steps:
+      - uses: astral-sh/setup-uv@v9.0.0
+      - uses: actions/download-artifact@v8
+        with:
+          name: dist
+          path: dist/
+      - run: uv publish
