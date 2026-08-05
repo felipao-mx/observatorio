@@ -229,9 +229,10 @@ registered once on PyPI (owner `felipao-mx`, repository `observatorio`, workflow
 the repository settings.
 
 1. Bump `version` in `pyproject.toml` and merge it.
-2. Tag the commit and publish a release — `v0.2.0` for version `0.2.0`.
-   The workflow fails if the tag and the version disagree, because PyPI will not
-   let a file be replaced once uploaded.
+2. Tag the commit and publish a release. The tag is the bare version, with no
+   `v` prefix — `0.2.0` for version `0.2.0`. The workflow fails if the tag and
+   the version disagree, because PyPI will not let a file be replaced once
+   uploaded.
 
 [tp]: https://docs.pypi.org/trusted-publishers/
 
