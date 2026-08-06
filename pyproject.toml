@@ -65,6 +65,12 @@ branch = true
 
 [tool.coverage.report]
 show_missing = true
+fail_under = 100
+exclude_also = [
+    # Entry-point boilerplate, duplicated in __main__.py, reachable only via
+    # `python -m observatorio.cli`. Calling main() directly covers the behavior.
+    "if __name__ == .__main__.:",
+]
 
 [tool.ruff]
 line-length = 100
