@@ -61,6 +61,6 @@ run:  ## Print current service status
 	$(UV) observatorio
 
 clean:  ## Remove build and cache artefacts
-	rm -rf build dist .pytest_cache .ruff_cache
+	rm -rf build dist .pytest_cache .ruff_cache .coverage coverage.xml
 	find . -type d -name __pycache__ -prune -exec rm -rf {} +
 	find . -type d -name '*.egg-info' -prune -exec rm -rf {} +
