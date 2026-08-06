@@ -10,4 +10,9 @@ venv/
 .pytest_cache/
 .ruff_cache/
 
-.venv/
+# Agent runtime files
+.agent_context/
+.multica/
+.claude/
+AGENTS.md
+CLAUDE.md
