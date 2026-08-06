@@ -30,10 +30,10 @@ feed omits).
 ## Install
 
 ```bash
-pip install observatorio     # once published
+pip install observatorio
 ```
 
-Not on PyPI yet. For now:
+Or from source:
 
 ```bash
 git clone https://github.com/felipao-mx/observatorio
