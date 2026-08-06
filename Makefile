@@ -6,9 +6,9 @@
 # step. The dev dependency group is synced by default.
 UV := uv run
 
-# The dev default is pinned to the newest supported Python (see .python-version)
-# for day-to-day local work. test-matrix still covers the bottom of the range
-# so too-new syntax is caught before CI.
+# The dev default is pinned to the oldest supported Python (see .python-version)
+# so a 3.13+ only feature cannot sneak past locally. test-matrix covers the top
+# of the range.
 NEWEST := 3.14
 
 help:  ## Show this help

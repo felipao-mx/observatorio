@@ -43,11 +43,11 @@ jobs:
         with:
           enable-cache: true
           python-version: ${{ matrix.python-version }}
-      - if: matrix.python-version != '3.14'
+      - if: matrix.python-version != '3.12'
         run: uv run --python ${{ matrix.python-version }} pytest -q
-      - if: matrix.python-version == '3.14'
+      - if: matrix.python-version == '3.12'
         run: uv run --python ${{ matrix.python-version }} pytest -q --cov --cov-report=term-missing --cov-report=xml
-      - if: matrix.python-version == '3.14'
+      - if: matrix.python-version == '3.12'
         uses: codecov/codecov-action@v5
         with:
           files: coverage.xml
