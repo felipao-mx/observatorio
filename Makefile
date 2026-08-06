@@ -6,10 +6,10 @@
 # step. The dev dependency group is synced by default.
 UV := uv run
 
-# The dev default is pinned to the oldest supported Python (see .python-version)
-# so a 3.10+ only feature cannot sneak past locally. test-matrix covers the top
-# of the range.
-NEWEST := 3.13
+# The dev default is pinned to the newest supported Python (see .python-version)
+# for day-to-day local work. test-matrix still covers the bottom of the range
+# so too-new syntax is caught before CI.
+NEWEST := 3.14
 
 help:  ## Show this help
 	@grep -hE '^[a-zA-Z_-]+:.*?## ' $(MAKEFILE_LIST) \
@@ -31,7 +31,7 @@ coverage:  ## Run tests with coverage and write coverage.xml
 	VCR_RECORD_MODE=none $(UV) pytest -q --cov --cov-report=term-missing --cov-report=xml
 
 test-matrix:  ## Run the suite on the oldest and newest supported Python
-	VCR_RECORD_MODE=none uv run --python 3.9 pytest -q
+	VCR_RECORD_MODE=none uv run --python 3.12 pytest -q
 	VCR_RECORD_MODE=none uv run --python $(NEWEST) pytest -q
 
 # Runs the pre-commit hooks rather than calling ruff and ty directly, so this,

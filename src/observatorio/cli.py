@@ -6,7 +6,7 @@ import argparse
 import asyncio
 import json
 import sys
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from typing import Any
 
 from .client import StatusClient
@@ -59,7 +59,7 @@ async def _watch(interval: int, as_json: bool) -> int:
                     last_hash = snap["hash"]
             except Exception as exc:  # a transient failure must not kill the loop
                 print(
-                    f"!! {datetime.now(timezone.utc).isoformat()} {exc}",
+                    f"!! {datetime.now(UTC).isoformat()} {exc}",
                     file=sys.stderr,
                     flush=True,
                 )

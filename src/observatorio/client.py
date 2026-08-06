@@ -17,7 +17,7 @@ import hashlib
 import json
 import re
 import xml.etree.ElementTree as ET
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from typing import Any
 
 import httpx
@@ -266,7 +266,7 @@ class StatusClient:
         return {
             # The page prints "Actualización: HH:MM" but it is render time, not
             # a last-modified, so we stamp our own and hash for change detection.
-            "fetched_at": datetime.now(timezone.utc).isoformat(),
+            "fetched_at": datetime.now(UTC).isoformat(),
             "hash": hashlib.sha256(
                 json.dumps(rows, sort_keys=True, ensure_ascii=False).encode()
             ).hexdigest()[:12],

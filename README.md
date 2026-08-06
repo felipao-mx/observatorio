@@ -47,7 +47,7 @@ cd observatorio
 uv sync
 ```
 
-Python 3.9+. Depends on `httpx` and `beautifulsoup4`.
+Python 3.12+. Depends on `httpx` and `beautifulsoup4`.
 
 ## Usage
 
@@ -221,8 +221,8 @@ safely can and then fails; re-stage and commit again.
 
 Every pull request runs the same checks on GitHub Actions
 ([`.github/workflows/ci.yml`](.github/workflows/ci.yml)): the identical hook list
-over every file (so `--no-verify` is caught), the test suite on Python 3.9
-through 3.13, and a packaging build. CI sets `VCR_RECORD_MODE=none`, so a request
+over every file (so `--no-verify` is caught), the test suite on Python 3.12
+through 3.14, and a packaging build. CI sets `VCR_RECORD_MODE=none`, so a request
 without a cassette fails instead of reaching the live service.
 
 ## Releasing

@@ -36,18 +36,18 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        python-version: ["3.9", "3.10", "3.11", "3.12", "3.13"]
+        python-version: ["3.12", "3.13", "3.14"]
     steps:
       - uses: actions/checkout@v7
       - uses: astral-sh/setup-uv@v9.0.0
         with:
           enable-cache: true
           python-version: ${{ matrix.python-version }}
-      - if: matrix.python-version != '3.13'
+      - if: matrix.python-version != '3.14'
         run: uv run --python ${{ matrix.python-version }} pytest -q
-      - if: matrix.python-version == '3.13'
+      - if: matrix.python-version == '3.14'
         run: uv run --python ${{ matrix.python-version }} pytest -q --cov --cov-report=term-missing --cov-report=xml
-      - if: matrix.python-version == '3.13'
+      - if: matrix.python-version == '3.14'
         uses: codecov/codecov-action@v5
         with:
           files: coverage.xml
