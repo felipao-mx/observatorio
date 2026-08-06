@@ -1,5 +1,5 @@
 .DEFAULT_GOAL := help
-.PHONY: help install hooks lock test test-matrix lint format check dist record run clean
+.PHONY: help install hooks lock test coverage test-matrix lint format check dist record run clean
 
 # Everything runs through `uv run`, which syncs the environment from
 # pyproject.toml + uv.lock first, so no target needs to depend on an install
@@ -26,6 +26,9 @@ lock:  ## Re-resolve dependencies and update uv.lock
 
 test:  ## Run the test suite (replays VCR cassettes, no network)
 	VCR_RECORD_MODE=none $(UV) pytest -q
+
+coverage:  ## Run tests with coverage and write coverage.xml
+	VCR_RECORD_MODE=none $(UV) pytest -q --cov --cov-report=term-missing --cov-report=xml
 
 test-matrix:  ## Run the suite on the oldest and newest supported Python
 	VCR_RECORD_MODE=none uv run --python 3.9 pytest -q
@@ -58,6 +61,6 @@ run:  ## Print current service status
 	$(UV) observatorio
 
 clean:  ## Remove build and cache artefacts
-	rm -rf build dist .pytest_cache .ruff_cache
+	rm -rf build dist .pytest_cache .ruff_cache .coverage coverage.xml
 	find . -type d -name __pycache__ -prune -exec rm -rf {} +
 	find . -type d -name '*.egg-info' -prune -exec rm -rf {} +

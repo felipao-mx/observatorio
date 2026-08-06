@@ -43,7 +43,16 @@ jobs:
         with:
           enable-cache: true
           python-version: ${{ matrix.python-version }}
-      - run: uv run --python ${{ matrix.python-version }} pytest -q
+      - if: matrix.python-version != '3.13'
+        run: uv run --python ${{ matrix.python-version }} pytest -q
+      - if: matrix.python-version == '3.13'
+        run: uv run --python ${{ matrix.python-version }} pytest -q --cov --cov-report=term-missing --cov-report=xml
+      - if: matrix.python-version == '3.13'
+        uses: codecov/codecov-action@v5
+        with:
+          files: coverage.xml
+          token: ${{ secrets.CODECOV_TOKEN }}
+          fail_ci_if_error: false
 
   build:
     name: Build distributions
