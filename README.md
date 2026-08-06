@@ -1,5 +1,11 @@
 # observatorio
 
+[![CI status](https://github.com/felipao-mx/observatorio/actions/workflows/ci.yml/badge.svg)](https://github.com/felipao-mx/observatorio/actions/workflows/ci.yml)
+[![Test coverage](https://codecov.io/gh/felipao-mx/observatorio/graph/badge.svg)](https://codecov.io/gh/felipao-mx/observatorio)
+[![PyPI version](https://img.shields.io/pypi/v/observatorio)](https://pypi.org/project/observatorio/)
+[![Supported Python versions](https://img.shields.io/pypi/pyversions/observatorio)](https://pypi.org/project/observatorio/)
+[![License](https://img.shields.io/pypi/l/observatorio)](LICENSE)
+
 Live service status for Mexico City's public transport — Metro, Metrobús,
 Trolebús, Tren Ligero and Cablebús — as plain Python dictionaries.
 
@@ -14,7 +20,7 @@ HTML, and parsing it correctly is harder than it looks — see
 *Observatorio* is the western terminal of Metro Línea 1, and a place from which
 you watch.
 
-## Coverage
+## Systems covered
 
 | `sistema_id` | System | Lines |
 |---|---|---|
@@ -90,8 +96,8 @@ Returns a list of rows, healthy ones included:
 ```
 
 The `sistema_id` is one of `"stc"`, `"mb"`, `"ste"` or `"cb"` (see
-[Coverage](#coverage)); the full mapping is exported as `SYSTEMS`, and anything
-else raises `ValueError`.
+[Systems covered](#systems-covered)); the full mapping is exported as `SYSTEMS`,
+and anything else raises `ValueError`.
 
 Both calls share the same row shape — see [Data shape](#data-shape) for what
 each field means.

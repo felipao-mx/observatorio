@@ -9,6 +9,8 @@ venv/
 .DS_Store
 .pytest_cache/
 .ruff_cache/
+.coverage
+coverage.xml
 
 # Agent runtime files
 .agent_context/
